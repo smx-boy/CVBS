@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<style>
+    .form-group{
+        width: 700px;
+    }
+</style>
+<body>
+<center>
+    <form class="form-horizontal" action="upd_do" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">编号</label>
+            <div class="col-sm-10">
+                <input type="text" name="id"class="form-control" value="<?php echo $data['id']?>">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">品名</label>
+            <div class="col-sm-10">
+                <input type="text" name="pinname"class="form-control" id="inputEmail3" value="<?php echo $data['pinname']?>">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">规格</label>
+            <div class="col-sm-10">
+                <input type="text" name="gg" class="form-control"  value="<?php echo $data['gg']?>">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">公斤数</label>
+            <div class="col-sm-10">
+                <input type="text" name="gj" class="form-control"  value="<?php echo $data['gj']?>">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">面宽</label>
+            <div class="col-sm-10">
+                <input type="text" name="weight" class="form-control"  value="<?php echo $data['weight']?>">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">腿高</label>
+            <div class="col-sm-10">
+                <input type="text" name="height" class="form-control"  value="<?php echo $data['height']?>">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">腰厚</label>
+            <div class="col-sm-10">
+                <input type="text" name="hou" class="form-control"  value="<?php echo $data['hou']?>">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputFile">点击添加图片</label>
+            <input type="file" name="file" id="exampleInputFile">
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">修改</button>
+            </div>
+        </div>
+    </form>
+</center>
+</body>
+</html>

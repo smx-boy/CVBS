@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<style>
+    .form-horizontal {
+        width: 650px;
+    }
+</style>
+<body>
+<center>
+    <form class="form-horizontal" action="upd_do" method="post">
+        <h1>修改医院用户信息</h1>
+        div class="form-group">
+        <label  class="col-sm-2 control-label">id</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control"  value="<?php echo $list['id']?>">
+        </div>
+        </div>
+        <div class="form-group">
+            <label  class="col-sm-2 control-label">姓名</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control"  value="<?php echo $list['name']?>">
+            </div>
+        </div>
+        <div class="form-group">
+            <label  class="col-sm-2 control-label">年龄</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control"  value="<?php echo $list['old']?>" >
+            </div>
+        </div>
+        <div class="form-group">
+            <label  class="col-sm-2 control-label">性别</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control"  value="<?php echo $list['xb']?>">
+            </div>
+        </div>
+        <div class="form-group">
+            <label  class="col-sm-2 control-label">手机号</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control"  value="<?php echo $list['phone']?>">
+            </div>
+        </div>
+        <div class="form-group">
+            <label  class="col-sm-2 control-label">是否住院</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control"  value="<?php echo $list['zy']?>">
+            </div>
+        </div>
+        <div class="form-group">
+            <label  class="col-sm-2 control-label">床位</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control"  value="<?php echo $list['cw']?>">
+            </div>
+        </div>
+        <div class="form-group">
+            <label  class="col-sm-2 control-label">出生日期</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control"  value="<?php echo $list['birth']?>">
+            </div>
+        </div>
+        <div class="form-group">
+            <label  class="col-sm-2 control-label">是否死亡</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control"  value="<?php echo $list['death']?>">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">修改</button>
+            </div>
+        </div>
+    </form>
+</center>
+</body>
+</html>

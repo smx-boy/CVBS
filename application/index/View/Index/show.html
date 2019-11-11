@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+</head>
+<style>
+    .carousel{
+        width: 50%;
+        margin: 0 auto;
+    }
+    .table-hover{
+        width: 50%;
+        border: 1px;
+    }
+</style>
+<body>
+<div id="myCarousel" class="carousel slide">
+    <!-- 轮播（Carousel）指标 -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <!-- 轮播（Carousel）项目 -->
+    <div class="carousel-inner">
+        {foreach $data as $key=>$vo }
+            {if $key==0}
+                <div class="item active">
+            {else/}
+                <div class="item">
+            {/if}
+                <img src="{$vo['file']}" alt="First slide">
+            </div>
+        {/foreach}
+    </div>
+    <!-- 轮播（Carousel）导航 -->
+    <a class="carousel-control left" href="#myCarousel"
+       data-slide="prev">&lsaquo;</a>
+    <a class="carousel-control right" href="#myCarousel"
+       data-slide="next">&rsaquo;</a>
+</div>
+    <center>
+        <table class="table table-hover">
+            <tr>
+                <td>id</td>
+                <td>名字</td>
+                <td>头像</td>
+                <td>操作</td>
+            </tr>
+            <?php foreach($data as $key =>$val) { ?>
+                <tr>
+                    <td><?php echo $val['id']?></td>
+                    <td><?php echo $val['name']?></td>
+                    <td><img src="{$val['file']}" alt="" width="100px" height="70px"></td>
+                    <td>
+                        <a href="add.html">添加</a>
+                        <a href="upd?id=<?php echo $val['id']?>">修改</a>
+                        <a href="del?id=<?php echo $val['id']?>">删除</a>
+                    </td>
+                </tr>
+            <?php } ?>
+        </table>
+    </center>
+
+
+</body>
+</html>

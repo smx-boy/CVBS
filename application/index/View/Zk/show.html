@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<style>
+    .table-bordered{
+        margin-left: 200px;
+    }
+</style>
+<body>
+<center>
+    <table class="table table-bordered">
+        <tr>
+            <td>编号</td>
+            <td>品名</td>
+            <td>规格</td>
+            <td>公斤数</td>
+            <td>宽</td>
+            <td>高</td>
+            <td>厚</td>
+            <td>照片</td>
+            <td>操作</td>
+        </tr>
+        <?php foreach ($data as $key => $val) {?>
+        <tr>
+            <td><?php echo $val['id']?></td>
+            <td><?php echo $val['pinname']?></td>
+            <td><?php echo $val['gg']?></td>
+            <td><?php echo $val['gj']?></td>
+            <td><?php echo $val['weight']?></td>
+            <td><?php echo $val['height']?></td>
+            <td><?php echo $val['hou']?></td>
+            <td><img src="http://www.smx66.com/uploads/.<?php echo $val['file']?>"></td>
+            <td>
+                <a href="add.html">添加</a>
+                <a href="upd?id=<?php echo $val['id']?>">修改</a>
+                <a href="del?id=<?php echo $val['id']?>">删除</a>
+            </td>
+        </tr>
+        <?php }?>
+    </table>
+    <ul>
+        <li><a href="?page=1">&laquo;</a></li>
+        <li><span>&raquo;</span></li>
+        </ul>
+
+
+</center>
+</body>
+</html>
